@@ -5,7 +5,7 @@ from selenium.webdriver.common.keys import Keys
 from django.test import LiveServerTestCase
 import time
 
-MAXWAIT = 10
+MAXWAIT = 3
 
 class NewVisitorTest(LiveServerTestCase):
     def setUp(self):

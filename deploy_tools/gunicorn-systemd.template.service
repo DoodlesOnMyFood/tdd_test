@@ -5,7 +5,7 @@ Desciption=Gunicorn server for SITENAME
 Restart=on-failure
 User=dooyee
 WorkingDirectory=/home/dooyee/sites/SITENAME/source
-ExecStart=/home/dooyee/sites/SITENAME/virtualenv/bin/gunicorn --bind unix:/tmp/SITENAME.socket siperlists.wsgi:application
+ExecStart=/home/dooyee/sites/SITENAME/virtualenv/bin/gunicorn --bind unix:/tmp/SITENAME.socket superlists.wsgi:application
 
 [Install]
 WantedBy=multi-user.target

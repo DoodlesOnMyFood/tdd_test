@@ -30,3 +30,13 @@ class Functional_Test(StaticLiveServerTestCase):
                     raise e
                 time.sleep(.5)
 
+    def wait_for(self, assertion):
+        start_time = time.time()
+        while True:
+            try:
+                assertion()
+                return
+            except (AssertionError) as e:
+                if time.time() - start_time > MAXWAIT:
+                    raise e
+                time.sleep(.5)

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import os
 from selenium import webdriver
-from selenium.common.exceptions import WebDriverException
+from selenium.common.exceptions import WebDriverException, NoSuchElementException
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 import time
 
@@ -25,7 +25,7 @@ class Functional_Test(StaticLiveServerTestCase):
                 rows = table.find_elements_by_tag_name('tr')
                 self.assertIn(row_text, [row.text for row in rows])
                 return
-            except (AssertionError, WebDriverException) as e:
+            except (AssertionError, WebDriverException, NoSuchElementException) as e:
                 if time.time() - start_time > MAXWAIT:
                     raise e
                 time.sleep(.5)

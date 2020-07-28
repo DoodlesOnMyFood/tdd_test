@@ -12,7 +12,14 @@ def view_list(request, list_id):
 
 def new_list(request):
     new_list = List.objects.create()
-    Item.objects.create(text=request.POST['item_text'],list=new_list)
+    item = Item(text=request.POST['item_text'],list=new_list)
+    try:
+        item.full_clean()
+        item.save()
+    except:
+        new_list.delete()
+        error = 'You can\'t have an empty list item'
+        return render(request, 'lists/home.html', {'error':error})
     return redirect(f'/lists/{new_list.id}/')
 
 def add_item(request, list_id):

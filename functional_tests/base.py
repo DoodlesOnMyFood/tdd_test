@@ -36,7 +36,7 @@ class Functional_Test(StaticLiveServerTestCase):
             try:
                 assertion()
                 return
-            except (AssertionError) as e:
+            except (AssertionError, NoSuchElementException) as e:
                 if time.time() - start_time > MAXWAIT:
                     raise e
                 time.sleep(.5)

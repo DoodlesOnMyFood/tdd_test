@@ -1266,3 +1266,23 @@ JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 691:
 1596522411564	Marionette	WARN	TLS certificate errors will be ignored for this session
 1596522411791	Marionette	INFO	Stopped listening on port 35965
 JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 691: TypeError: this.tablesData[table] is undefined
+1596523619878	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile6O4Hjf"
+1596523622828	Marionette	INFO	Listening on port 39713
+1596523622892	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
+1596523626370	Marionette	INFO	Stopped listening on port 39713
+1596523628346	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileHksSHW"
+1596523631968	Marionette	INFO	Listening on port 35085
+1596523632064	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
+1596523635404	Marionette	INFO	Stopped listening on port 35085
+1596523637252	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileq2rVu7"
+1596523640401	Marionette	INFO	Listening on port 37961
+1596523640463	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
+1596523641807	Marionette	INFO	Stopped listening on port 37961
+1596523643704	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileO6FXsu"
+1596523646739	Marionette	INFO	Listening on port 36041
+1596523646822	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
+1596523650224	Marionette	INFO	Stopped listening on port 36041

@@ -2,7 +2,7 @@ from django.test import TestCase
 from lists.models import List, Item
 from lists.forms import ItemForm, EMPTY_ITEM_ERROR, ExistingListItemForm, DUPLICATE_ITEM_ERROR
 
-class ExistingListItemFormTest(TestCase):
+class ItemFormTest(TestCase):
     def test_form_item_input_has_placeholder_and_css_classes(self):
         form = ItemForm()
         self.assertIn('placeholder="Enter a to-do item"', form.as_p())
@@ -20,6 +20,12 @@ class ExistingListItemFormTest(TestCase):
         self.assertEqual(new_item, Item.objects.first())
         self.assertEqual(new_item.text, 'test')
         self.assertEqual(new_item.list, list_)
+
+    def test_form_save(self):
+        list_ = List.objects.create()
+        form = ExistingListItemForm(for_list=list_, data={'text':'HH'})
+        new_item = form.save()
+        self.assertEqual(new_item, Item.objects.all()[0])
 
 class ExistingListItemFormTest(TestCase):
     def test_form_renders_itme_text_input(self):
